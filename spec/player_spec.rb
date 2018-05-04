@@ -3,9 +3,9 @@ require 'game'
 
 describe Player do
   subject(:name) { described_class.new('Zoe') }
-  subject(:game) { Game.new(player1, player2) }
-  subject(:player1) { described_class.new('Charly') }
-  subject(:player2) { described_class.new('Zoe') }
+  subject(:game) { Game.new(player_1, player_2) }
+  subject(:player_1) { described_class.new('Charly') }
+  subject(:player_2) { described_class.new('Zoe') }
 
 
   describe '#name' do
@@ -24,9 +24,9 @@ describe Player do
   describe '#damage_received' do
     # let(:game) { double :game, :player1,:player2}
     it 'reduces the hit points by damage amount' do
-      allow(player1).to receive(:damage_received)
-      game.attack(player2)
-      expect(player2.hit_points).to eq 50
+      allow(player_1).to receive(:damage_received)
+      game.attack(player_2)
+      expect(player_2.hit_points).to eq 50
     end
   end
 end
